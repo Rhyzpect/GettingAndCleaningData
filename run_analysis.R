@@ -120,4 +120,4 @@ result <- dcast(melteddata,subject+activity~variable,mean)
 
 ## And it is done. To save, use the write.table() function.
 
-write.table(result,file="~/R/result.txt",row.names = FALSE)
+write.table(result,file=paste(directory,"/result.txt",sep=""),row.names = FALSE)

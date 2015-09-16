@@ -15,11 +15,14 @@ The script uses the `dplyr` and `reshape2` packages. For the script to work, mak
 
 The script reads and stores the test data in a variable i.e., `subject_test` = subject_test.txt, `x_test` = X_test.txt, `y_test` = y_test.txt,`features` = features.txt, `activity_labels` = activity_labels.txt.  It then refines and organizes each data frame to produce one table that is easy to read and understand where each variable names are specifically shown and the activity is explicitly written. The script then does the same thing with the train dataset. It then merges the resulting train and test data to make one big tidy data. 
 
-Once the merge data is obtained, the script trims down the data and removes columns variables except from `subject', `activity` and column names with mean and standard deviation in them.  It then makes a table that shows the average for each of these measurements for each activity and each subject and save it in a txt file. 
+Once the merge data is obtained, the script trims down the data and removes columns variables except from `subject`, `activity` and column names with mean and standard deviation in them.  It then makes a table that shows the average for each of these measurements for each activity and each subject and save it in a txt file.  The `result` of the script is saved in the working directory. 
 
 
+## Acknowledgement
+For the dataset, 
 
+**Davide Anguita**, **Alessandro Ghio**, **Luca Oneto**, **Xavier Parra** and **Jorge L. Reyes-Ortiz**. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
 
-
+For my instructor, **Jeff Leek**, **Roger D. Peng** and **Brian Caffo** from John Hopskins University under Coursera.  Thank you for this opportunity to learn new things. 
 
 
