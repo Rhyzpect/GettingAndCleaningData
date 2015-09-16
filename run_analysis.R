@@ -4,6 +4,7 @@
 
 library(dplyr)
 library(reshape2)
+directory <- getwd()
 
 # Create a directory for UCI HAR dataset.  You don't need to rename the data
 # inside the folder.
@@ -13,15 +14,15 @@ library(reshape2)
 # activity_labels.txt. The read.table() function should be used for reading 
 # text files. 
 
-activity_labels <- read.table("~/UCI HAR Dataset/activity_labels.txt")
+activity_labels <- read.table(paste(directory,"/UCI HAR Dataset/activity_labels.txt",sep=""))
 
-y_test <- read.table("~/UCI HAR Dataset/test/y_test.txt")
+y_test <- read.table(paste(directory,"/UCI HAR Dataset/test/y_test.txt",sep=""))
 
-subject_test <- read.table("~/UCI HAR Dataset/test/subject_test.txt")
+subject_test <- read.table(paste(directory,"/UCI HAR Dataset/test/subject_test.txt",sep=""))
 
-x_test <- read.table("~/UCI HAR Dataset/test/X_test.txt")
+x_test <- read.table(paste(directory,"/UCI HAR Dataset/test/X_test.txt",sep=""))
 
-features <- read.table("~/UCI HAR Dataset/features.txt")
+features <- read.table(paste(directory,"/UCI HAR Dataset/features.txt",sep=""))
 
 # Once the data are loaded in the R environment, check the data for NA's,
 # variable types, and its structure.  Use str(), summary() function.
@@ -62,11 +63,11 @@ testdata <- cbind(subject_test,y_test,x_test)
 # need to read again the features.txt and activity_labels.txt since it is
 # already in the environment.
 
-subject_train <- read.table("~/UCI HAR Dataset/train/subject_train.txt")
+subject_train <- read.table(paste(directory,"/UCI HAR Dataset/train/subject_train.txt",sep=""))
 
-x_train <- read.table("~/UCI HAR Dataset/train/X_train.txt")
+x_train <- read.table(paste(directory,"/UCI HAR Dataset/train/X_train.txt",sep=""))
 
-y_train <- read.table("~/UCI HAR Dataset/train/y_train.txt")
+y_train <- read.table(paste(directory,"/UCI HAR Dataset/train/y_train.txt",sep=""))
 
 y_train$V1 <- factor(y_train$V1,levels=level,labels=label)
 
