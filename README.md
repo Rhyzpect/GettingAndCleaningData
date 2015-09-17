@@ -26,3 +26,5 @@ For the dataset,
 For my instructor, **Jeff Leek**, **Roger D. Peng** and **Brian Caffo** from John Hopskins University under Coursera.  Thank you for this opportunity to learn new things. 
 
 
+## Version
+The script was created and run in R version 3.2.2 (Windows 7 Ultimate).
